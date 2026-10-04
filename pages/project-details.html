@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reusable project details page">
+  <title>Project Details | YBRAHIM GAYATAO</title>
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <header class="site-header scrolled">
+    <nav class="navbar container">
+      <a class="brand" href="../index.html">YBRAHIM GAYATAO</a>
+      <a class="btn btn-secondary" href="../index.html#projects">Back to Portfolio</a>
+    </nav>
+  </header>
+  <main>
+    <section class="section" style="padding-top:150px">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Project Details</p>
+          <h1 id="title">Project Title</h1>
+          <p id="description">Project description.</p>
+        </div>
+        <div class="about-grid">
+          <img id="image" src="../assets/images/project-1.svg" alt="Project preview">
+          <div class="timeline-card">
+            <h3>Problem Statement</h3>
+            <p>Describe the real problem the project addresses.</p>
+            <h3 style="margin-top:20px">Objectives</h3>
+            <p>List the main objectives and expected outcomes.</p>
+            <h3 style="margin-top:20px">Features</h3>
+            <p>Describe the important system features.</p>
+            <h3 style="margin-top:20px">Development Process</h3>
+            <p>Explain the workflow, tools, testing, and iteration.</p>
+            <h3 style="margin-top:20px">Challenges & Solutions</h3>
+            <p>Document major challenges and how they were addressed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../js/projects.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = Number(params.get("id")) || 1;
+    const project = projects.find(item => item.id === id);
+    if (project) {
+      document.getElementById("title").textContent = project.title;
+      document.getElementById("description").textContent = project.description;
+      document.getElementById("image").src = `../${project.image}`;
+      document.getElementById("image").alt = `${project.title} preview`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+@media (max-width: 1024px) {
+  .nav-menu { gap: 12px; }
+  .nav-link { font-size: .78rem; }
+  .hero-grid { gap: 35px; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .achievement-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .container { width: min(calc(100% - 30px), var(--max-width)); }
+  .section { padding: 75px 0; }
+  .menu-toggle { display: grid; place-items: center; }
+  .nav-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 15px;
+    right: 15px;
+    padding: 18px;
+    display: grid;
+    gap: 6px;
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all var(--transition);
+  }
+  .nav-menu.open { opacity: 1; visibility: visible; transform: none; }
+  .nav-link { padding: 10px 4px; }
+  .theme-toggle { margin-top: 6px; }
+  .hero { padding-top: 110px; }
+  .hero-grid, .about-grid, .skills-layout, .contact-grid { grid-template-columns: 1fr; }
+  .hero-visual { min-height: 430px; order: -1; }
+  .profile-frame { width: min(300px, 68vw); }
+  .orbit-one { width: 360px; height: 360px; }
+  .orbit-two { width: 440px; height: 440px; }
+  .chip-one { left: 4%; }
+  .chip-two { right: 0; }
+  .chip-three { left: 5%; bottom: 10%; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .experience-grid, .certificate-grid { grid-template-columns: 1fr; }
+  .resume-banner { flex-direction: column; align-items: flex-start; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-links { flex-wrap: wrap; }
+}
+
+@media (max-width: 480px) {
+  .section-heading { margin-bottom: 34px; }
+  .hero-content h1 { font-size: 3.2rem; }
+  .hero-actions { display: grid; }
+  .btn { width: 100%; }
+  .projects-grid, .achievement-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .hero-visual { min-height: 350px; }
+  .orbit-one { width: 290px; height: 290px; }
+  .orbit-two { width: 350px; height: 350px; }
+  .floating-chip { font-size: .7rem; padding: 8px 10px; }
+  .footer-bottom { flex-direction: column; }
+}

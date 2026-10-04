@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Project showcase">
+  <title>Projects | YBRAHIM GAYATAO</title>
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <script src="https://kit.fontawesome.com/3b6f3c2e5d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="site-header scrolled">
+    <nav class="navbar container">
+      <a class="brand" href="../index.html">YOUR NAME</a>
+      <a class="btn btn-secondary" href="../index.html#projects">Back to Portfolio</a>
+    </nav>
+  </header>
+  <main>
+    <section class="section" style="padding-top:150px">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h1>Project Showcase</h1>
+          <p>Use this page for a larger project catalog. Project data is maintained in JavaScript.</p>
+        </div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+  </main>
+  <script src="../js/projects.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => renderProjects("all"));
+  </script>
+</body>
+</html>
